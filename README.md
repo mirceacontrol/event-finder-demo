@@ -11,6 +11,7 @@ A simple web app that lets you search for events from a local demo database, **w
 * **Event search:** Type a keyword and find matching events (example: “Cluj”, “Jazz”, etc.)
 * **Event details:** See the event name, date, venue, city, and a link to more info
 * **No backend/API key needed:** Works fully client-side using a sample events database
+* **Wishlist system:** Add and remove favorite events. Demo always simulates a logged-in user (wishlist is saved in your browser).
 
 ---
 

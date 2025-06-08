@@ -8,6 +8,8 @@ document.getElementById("search-form").addEventListener("submit", async function
   displayResults(events);
 });
 
+document.getElementById("view-wishlist").addEventListener("click", showWishlist);
+
 async function searchEvents(keyword, city, date) {
   try {
     const res = await fetch("events.json");
@@ -27,7 +29,44 @@ async function searchEvents(keyword, city, date) {
   }
 }
 
-function displayResults(events) {
+function addToWishlist(event) {
+  let wishlist = JSON.parse(localStorage.getItem("demoUserWishlist")) || [];
+  // Unique by name, date, and venue
+  const exists = wishlist.some(
+    e =>
+      e.name === event.name &&
+      e.date === event.date &&
+      e.venue === event.venue
+  );
+  if (!exists) {
+    wishlist.push(event);
+    localStorage.setItem("demoUserWishlist", JSON.stringify(wishlist));
+    alert("Added to wishlist!");
+  } else {
+    alert("Already in wishlist!");
+  }
+}
+
+function showWishlist() {
+  const wishlist = JSON.parse(localStorage.getItem("demoUserWishlist")) || [];
+  displayResults(wishlist, true);
+}
+
+function removeFromWishlist(event) {
+  let wishlist = JSON.parse(localStorage.getItem("demoUserWishlist")) || [];
+  wishlist = wishlist.filter(
+    e =>
+      !(
+        e.name === event.name &&
+        e.date === event.date &&
+        e.venue === event.venue
+      )
+  );
+  localStorage.setItem("demoUserWishlist", JSON.stringify(wishlist));
+  showWishlist();
+}
+
+function displayResults(events, isWishlist = false) {
   const container = document.getElementById("results");
   container.innerHTML = "";
 
@@ -42,8 +81,21 @@ function displayResults(events) {
     div.innerHTML = `
       <div class="event-title">${ev.name}</div>
       <div class="event-meta">${ev.date} – ${ev.venue}, ${ev.city}</div>
-      <div><a href="${ev.url}" target="_blank">View Event</a></div>
+      <div>
+        <a href="${ev.url}" target="_blank">View Event</a>
+        ${
+          isWishlist
+            ? '<button class="wishlist-btn-remove">❌ Remove from Wishlist</button>'
+            : '<button class="wishlist-btn">⭐ Add to Wishlist</button>'
+        }
+      </div>
     `;
     container.appendChild(div);
+
+    if (isWishlist) {
+      div.querySelector('.wishlist-btn-remove').onclick = () => removeFromWishlist(ev);
+    } else {
+      div.querySelector('.wishlist-btn').onclick = () => addToWishlist(ev);
+    }
   });
 }
