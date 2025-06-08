@@ -1,7 +1,7 @@
-# 🎫 Event Finder App
+# 🎫 Event Finder App Demo
 
-A simple web app that lets you search for events using the [Ticketmaster Public API](https://developer.ticketmaster.com/).
-This project demonstrates my ability to handle APIs, build dynamic web interfaces, and manage simple client-side storage.
+A simple web app that lets you search for events from a local demo database, **without needing any API keys or backend**. This version is safe to deploy on GitHub Pages and demonstrates search, filter, and UI logic.
+
 **Made for educational and portfolio purposes.**
 
 ---
@@ -9,14 +9,15 @@ This project demonstrates my ability to handle APIs, build dynamic web interface
 ## 🚀 Features
 
 * **Event search:** Type a keyword and find matching events (example: “Cluj”, “Jazz”, etc.)
-* **Event details:** See the event name, date, venue, and a link to view it on Ticketmaster
+* **Event details:** See the event name, date, venue, city, and a link to more info
+* **No backend/API key needed:** Works fully client-side using a sample events database
 
 ---
 
 ## 🛠️ Tech Stack
 
 * **Frontend:** HTML, CSS, JavaScript
-* **API:** [Ticketmaster Discovery API](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/)
+* **Data:** Local `events.json` file
 
 ---
 
@@ -25,7 +26,7 @@ This project demonstrates my ability to handle APIs, build dynamic web interface
 1. **Clone this repository:**
 
    ```bash
-   git clone https://github.com/mirceacontrol/event-finder-app.git
+   git clone https://github.com/mirceacontrol/event-finder-demo.git
    ```
 
 2. **Open `index.html`** directly in your browser
@@ -39,16 +40,15 @@ This project demonstrates my ability to handle APIs, build dynamic web interface
 ## 🌐 Live Demo
 
 Check out the app live here:
-[https://mirceacontrol.github.io/event-finder-app/](https://mirceacontrol.github.io/event-finder-app/)
+[https://mirceacontrol.github.io/event-finder-demo/](https://mirceacontrol.github.io/event-finder-demo/)
 
 ---
 
-## 📝 Legal / Usage Notice
+## 📝 About This Demo Version
 
-* This app uses the [Ticketmaster Public API](https://developer.ticketmaster.com/) for demonstration purposes only.
-* **All event data is owned by Ticketmaster.**
-* The API key used is for educational and demo use; it may be rotated or disabled at any time.
-* **Not intended for commercial use.**
+* This demo **does not use any real Ticketmaster API keys or backend**.
+* All event data comes from a sample local database (`events.json`).
+* If you want to see real API handling, clone the full project at [event-finder-app](https://github.com/mirceacontrol/event-finder-app), add your Ticketmaster API key, and follow the README there.
 
 ---
 
@@ -59,5 +59,3 @@ Made by [Mircea](https://github.com/mirceacontrol).
 For older university projects, visit [@IgnatiucMircea](https://github.com/IgnatiucMircea).
 
 ---
-# event-finder-app
-Simple app to search for events using the Ticketmaster API
