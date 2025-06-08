@@ -8,10 +8,19 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <button id="view-wishlist" class="wishlist-floating">
+    <span class="icon-star"><svg><use href="#icon-star"></use></svg></span>
+    View Wishlist
+  </button>
   <div class="container">
-    <h1>🎫 Event Finder Demo</h1>
-    <button id="view-wishlist" style="float:right; margin-bottom: 10px;">View Wishlist ⭐</button>
-    <form id="search-form">
+    <div class="hero">
+      <span class="icon-ticket"><svg><use href="#icon-ticket"></use></svg></span>
+      <h1>Event Finder Demo</h1>
+      <div class="hero-desc">
+        Find cool events & add your favorites to wishlist!
+      </div>
+    </div>
+    <form id="search-form" autocomplete="off">
       <input type="text" id="search-input" placeholder="Search for events..." />
       <input type="text" id="city-input" placeholder="City (optional)" />
       <input type="date" id="date-input" />
@@ -20,5 +29,11 @@
     <div id="results"></div>
   </div>
   <script src="script.js"></script>
+  <svg style="display:none;">
+    <symbol id="icon-star" viewBox="0 0 20 20"><path fill="#eacb2e" d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z"/></symbol>
+    <symbol id="icon-ticket" viewBox="0 0 24 24"><path fill="#3066be" d="M21 5v2.764a1.236 1.236 0 010 2.472V13.5a1.5 1.5 0 01-1.5 1.5H4.5A1.5 1.5 0 013 13.5V10.236a1.236 1.236 0 010-2.472V5a2 2 0 012-2h14a2 2 0 012 2z"/></symbol>
+    <symbol id="icon-remove" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#e84545"/><line x1="6" y1="6" x2="14" y2="14" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="14" y1="6" x2="6" y2="14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="icon-add" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#3066be"/><text x="10" y="15" font-size="13" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="bold">+</text></symbol>
+  </svg>
 </body>
 </html>

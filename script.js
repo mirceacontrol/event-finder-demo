@@ -79,14 +79,23 @@ function displayResults(events, isWishlist = false) {
     const div = document.createElement("div");
     div.className = "event-card";
     div.innerHTML = `
-      <div class="event-title">${ev.name}</div>
+      <div class="event-title">
+        <span class="icon-ticket"><svg><use href="#icon-ticket"></use></svg></span>
+        ${ev.name}
+      </div>
       <div class="event-meta">${ev.date} – ${ev.venue}, ${ev.city}</div>
-      <div>
+      <div class="event-card-actions">
         <a href="${ev.url}" target="_blank">View Event</a>
         ${
           isWishlist
-            ? '<button class="wishlist-btn-remove">❌ Remove from Wishlist</button>'
-            : '<button class="wishlist-btn">⭐ Add to Wishlist</button>'
+            ? `<button class="wishlist-btn-remove">
+                <span class="icon-remove"><svg><use href="#icon-remove"></use></svg></span>
+                Remove from Wishlist
+               </button>`
+            : `<button class="wishlist-btn">
+                <span class="icon-star"><svg><use href="#icon-star"></use></svg></span>
+                Add to Wishlist
+               </button>`
         }
       </div>
     `;
