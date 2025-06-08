@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Jazz in the Park",
+    "date": "2025-07-10",
+    "venue": "Central Park",
+    "city": "Cluj-Napoca",
+    "url": "https://www.ticketmaster.com/event/jazz-in-the-park"
+  },
+  {
+    "name": "Rock Legends",
+    "date": "2025-08-02",
+    "venue": "Sala Polivalenta",
+    "city": "Cluj-Napoca",
+    "url": "https://www.ticketmaster.com/event/rock-legends"
+  },
+  {
+    "name": "Comedy Night",
+    "date": "2025-06-15",
+    "venue": "Teatrul National",
+    "city": "Bucharest",
+    "url": "https://www.ticketmaster.com/event/comedy-night"
+  },
+  {
+    "name": "Electronic Fiesta",
+    "date": "2025-07-25",
+    "venue": "Arenele Romane",
+    "city": "Bucharest",
+    "url": "https://www.ticketmaster.com/event/electronic-fiesta"
+  },
+  {
+    "name": "Folk Evenings",
+    "date": "2025-09-12",
+    "venue": "Casa de Cultura a Studentilor",
+    "city": "Cluj-Napoca",
+    "url": "https://www.ticketmaster.com/event/folk-evenings"
+  },
+  {
+    "name": "Summer Tech Conference",
+    "date": "2025-08-18",
+    "venue": "BT Arena",
+    "city": "Cluj-Napoca",
+    "url": "https://www.ticketmaster.com/event/summer-tech-conference"
+  },
+  {
+    "name": "Wine & Jazz Night",
+    "date": "2025-07-22",
+    "venue": "Wine Cellar",
+    "city": "Sibiu",
+    "url": "https://www.ticketmaster.com/event/wine-jazz-night"
+  }
+]
