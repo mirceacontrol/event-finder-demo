@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Event Finder</title>
+  <title>Event Finder Demo</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🎫 Event Finder</h1>
-  
-  <form id="search-form">
-    <input type="text" id="search-input" placeholder="Search for events..." required />
-    <button type="submit">Search</button>
-  </form>
-
-  <div id="results"></div>
-
+  <div class="container">
+    <h1>🎫 Event Finder Demo</h1>
+    <form id="search-form">
+      <input type="text" id="search-input" placeholder="Search for events..." />
+      <input type="text" id="city-input" placeholder="City (optional)" />
+      <input type="date" id="date-input" />
+      <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
