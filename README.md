@@ -25,7 +25,7 @@ This project demonstrates my ability to handle APIs, build dynamic web interface
 1. **Clone this repository:**
 
    ```bash
-   git clone https://github.com/<your-username>/event-finder-app.git
+   git clone https://github.com/mirceacontrol/event-finder-app.git
    ```
 
 2. **Open `index.html`** directly in your browser
@@ -54,7 +54,7 @@ Check out the app live here:
 
 ## 🙋 About Me
 
-Made by [Mircea](https://github.com/<mirceacontrol>).
+Made by [Mircea](https://github.com/mirceacontrol).
 
 For older university projects, visit [@IgnatiucMircea](https://github.com/IgnatiucMircea).
 
